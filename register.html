@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TECHFEST 2026 Registration</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .valid-input { border: 2px solid #28a745; outline: none; }
+        .invalid-input { border: 2px solid #dc3545; outline: none; }
+        .error-msg { color: #dc3545; font-size: 0.85em; display: block; margin-bottom: 5px; }
+    </style>
+</head>
+<body>
+    <div align="center">
+        <h1>TECHFEST 2026</h1>
+        <img src="./image/d.png" width="200" height="100" alt="Techfest Logo"/>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <form id="registrationForm" style="margin-top: 20px;" novalidate>
+        <label for="name">Name: </label>
+        <input type="text" id="name">
+        <span class="error-msg" id="nameError"></span>
+
+        <label for="email">Email: </label>
+        <input type="text" id="email">
+        <span class="error-msg" id="emailError"></span>
+
+        <label for="phone">Phone: </label>
+        <input type="text" id="phone">
+        <span class="error-msg" id="phoneError"></span>
+
+        <label for="dob">DOB: </label>
+        <input type="date" id="dob">
+        <span class="error-msg" id="dobError"></span>
+
+        <label>Gender: </label>
+        <input type="radio" id="male" name="gender" value="Male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="Female">
+        <label for="female">Female</label>
+        <span class="error-msg" id="genderError"></span><br>
+
+        <label>Events: </label>
+        <input type="checkbox" name="events" value="Workshop"> <label>Workshop</label>
+        <input type="checkbox" name="events" value="Competitions"> <label>Competitions</label>
+        <input type="checkbox" name="events" value="Games"> <label>Games</label>
+        <input type="checkbox" name="events" value="Musical Event"> <label>Musical Event</label>
+        <span class="error-msg" id="eventsError"></span><br>
+
+        <label for="department">Department: </label>
+        <select id="department">
+            <option value="">--Select Department--</option>
+            <option value="CSE">CSE</option>
+            <option value="ECE">ECE</option>
+            <option value="EEE">EEE</option>
+            <option value="CE">CE</option>
+            <option value="ME">ME</option>
+        </select>
+        <span class="error-msg" id="deptError"></span><br>
+
+        <label for="message">Message</label><br>
+        <textarea id="message" rows="6" cols="50" maxlength="500"></textarea><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <footer>
+        &copy;2026 Developed by laya
+    </footer>
+    <script defer src="js/app.js"></script>
+</body>
+</html>
